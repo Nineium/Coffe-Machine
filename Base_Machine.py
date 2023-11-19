@@ -1,15 +1,15 @@
 status = 'on'
 resources = {
-    "Water" : 2000,
-    "Milk" : 1000,
-    "Coffe" : 1000,
-    "Money" : 100
+    "Water": 2000,
+    "Milk": 1000,
+    "Coffe": 1000,
+    "Money": 100
 
 }
 prices = {
-    "espresso" : 8,
-    "latte" : 15,
-    "cappuccino" : 15,
+    "espresso": 8,
+    "latte": 15,
+    "cappuccino": 15,
 }
 
 while status == 'on':
@@ -19,9 +19,9 @@ while status == 'on':
     if prompt == 'off':
         status = 'off'
     if prompt == "status":
-        print (resources)
+        print(resources)
     if prompt == "espresso":
-        money_insert = input("Insert "+ str(prices["espresso"]) + "$: ")
+        money_insert = input("Insert " + str(prices["espresso"]) + "$: ")
         int_money_insert = int(money_insert)
         if resources["Water"] < 30 and resources["Coffe"] < 18:
             enough_resources = "No"
@@ -33,8 +33,8 @@ while status == 'on':
             print("Here is your coffe, enjoy!")
             if int_money_insert > prices["espresso"]:
                 change = int_money_insert - prices["espresso"]
-                resources["Money"] = resources["Money"]- change
-                print("Here is your change " +str(change)+ "$")
+                resources["Money"] = resources["Money"] - change
+                print("Here is your change " + str(change) + "$")
         elif int_money_insert < prices["espresso"]:
             print("Not enough money!")
     if prompt == "latte":
@@ -73,8 +73,3 @@ while status == 'on':
                 print("Here is your change " + str(change) + "$")
         elif int_money_insert < prices["cappuccino"]:
             print("Not enough money!")
-
-
-
-
-
